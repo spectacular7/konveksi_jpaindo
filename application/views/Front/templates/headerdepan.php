@@ -120,7 +120,7 @@
                                 <ul class="dropdown-menu submenu" role="menu">
                                     <?php foreach ($jenis as $pj) { ?>
                                         <li>
-                                            <a href="#"><?= $pj['NamaJenis']; ?></a>
+                                            <a href="<?= base_url('Front/pola/'). $pj['KodeJenis']; ?>"><?= $pj['NamaJenis']; ?></a>
                                         </li>
                                     <?php } ?>
                                 </ul>

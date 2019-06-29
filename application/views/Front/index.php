@@ -5,13 +5,13 @@
                         <div class="col-md-3 col-sm-3">
                             <?php foreach ($jenislimit1 as $jl1 ) { ?>
                                 <div class="block-content space30">
-                                    <img src="<?= base_url('assets/img/pola/'). $jl1['GbrPola'] ?>" class="img-responsive" alt=""/>
+                                    <img src="<?= base_url('assets/img/jenis/'). $jl1['GambarJenis'] ?>" class="img-responsive" alt=""/>
                                     <div class="text-style2">
-                                        <h6><?php echo $jl1['KodeJenis']; ?><br></h6>
+                                        <h6>Kaos<br></h6>
                                         <p>
-                                            <?php echo $jl1['KdPola']; ?>    
+                                            <?php echo $jl1['NamaJenis']; ?>    
                                         </p>
-                                        <a href="<?= base_url('assets/front/') ?>./pilih-pola.html">Pesan</a>
+                                        <a href="<?= base_url('Front/pola/'). $jl1['KodeJenis']; ?>">Pesan</a>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -20,13 +20,13 @@
                             <div class="home-carousel">
                                 <?php foreach ($jenis as $j3) { ?>
                                     <div>
-                                        <img src="<?= base_url('assets/img/pola/'). $j3['GbrPola'] ?>" class="img-responsive" alt=""/>
+                                        <img src="<?= base_url('assets/img/jenis/'). $j3['GambarJenis'] ?>" class="img-responsive" alt=""/>
                                         <div class="c-text">
-                                            <h4><?php echo $j3['KodeJenis']; ?><br></h4>
+                                            <h4>Kaos<br></h4>
                                             <p>
-                                                <?php echo $j3['KdPola']; ?>    
+                                                <?php echo $j3['NamaJenis']; ?>    
                                             </p>
-                                            <a href="<?= base_url('assets/front/') ?>./pilih-pola.html">Pesan</a>
+                                            <a href="<?= base_url('Front/pola/'). $j3['KodeJenis']; ?>">Pesan</a>
                                         </div>
                                     </div>
                                 <?php } ?>
@@ -35,13 +35,13 @@
                         <div class="col-md-3 col-sm-3">
                             <?php foreach ($jenislimit2 as $j12) { ?>
                                 <div class="block-content space30">
-                                    <img src="<?= base_url('assets/img/pola/'). $j12['GbrPola'] ?>" class="img-responsive" alt=""/>
+                                    <img src="<?= base_url('assets/img/jenis/'). $j12['GambarJenis'] ?>" class="img-responsive" alt=""/>
                                     <div class="text-style2">
-                                        <h6><?php echo $j12['KodeJenis']; ?><br></h6>
+                                        <h6>Kaos<br></h6>
                                             <p>
-                                                <?php echo $j12['KdPola']; ?>    
+                                                <?php echo $j12['NamaJenis']; ?>    
                                             </p>
-                                        <a href="<?= base_url('assets/front/') ?>./pilih-pola.html">Pesan</a>
+                                        <a href="<?= base_url('Front/pola/'). $j12['KodeJenis']; ?>">Pesan</a>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -51,7 +51,7 @@
                 <!-- AKHIIIIIIIIIIIIIR pilih PAKAIAN -->
                 <div class="clearfix space60"></div>
                 <!-- TESTIMONI PRODUK -->
-                <div class="featured-products">
+                <!-- <div class="featured-products">
                     <div class="container">
                         <div class="row">
                             <div class="heading-sub text-center">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- AKHIR TESTIMONI PRODUK -->
                 <!-- POLICY -->
                 <div class="policy-item" id="policy2">

@@ -21,6 +21,41 @@ class Front extends CI_Controller {
         $this->load->view('Front/templates/footer');
     }
 
+    public function pola($id)
+    {
+        $data['jenis'] = $this->Front_model->get_limit_jenis();
+        $data['getpola'] = $this->Front_model->get_pola_by_kdjenis($id);
+
+        $this->load->view('Front/templates/header');
+        $this->load->view('Front/pola', $data);
+        $this->load->view('Front/templates/footer');
+    }
+
+    public function single($id)
+    {
+        $data['desain'] = $this->Front_model->get_desain_by_kdpola($id);
+        // $data['idpola'] = $id;
+
+        $this->load->view('Front/templates/header');
+        $this->load->view('Front/single', $data);
+        $this->load->view('Front/templates/footer');
+    }
+
+    public function pesan($id)
+    {
+        $data['getall'] = $this->Front_model->get_barang_by_kddesain($id);
+        $rowdesain = $this->Front_model->get_design($id);
+        $rowjenis = $this->Front_model->get_jenis_by_kddesain($id);
+
+        $data['GbrDesain'] = $rowdesain->GbrDesain;
+        $data['Jenis'] = $rowjenis->NamaJenis;
+        
+
+        $this->load->view('Front/templates/header');
+        $this->load->view('Front/pesan', $data);
+        $this->load->view('Front/templates/footer');
+    }
+
     public function panduan()
     {
         $this->load->view('Front/panduan');

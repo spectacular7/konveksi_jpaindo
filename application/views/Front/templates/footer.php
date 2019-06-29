@@ -157,5 +157,8 @@
             <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
             <script src="<?= base_url('assets/front/'); ?>js/vendors/select/jquery.selectBoxIt.min.js"></script>
             <script src="<?= base_url('assets/front/'); ?>js/main.js"></script>
+            <script src="<?= base_url('assets/'); ?>js/adit.js"></script>
+            <script src="<?= base_url('assets/'); ?>js/adit.1.js"></script>
+            
             </body>
             </html>
