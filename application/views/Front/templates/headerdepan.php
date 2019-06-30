@@ -93,7 +93,7 @@
                 <!-- Logoooooo --></div>
             <div class="col-md-4 col-sm-4">
                 <div class="topcart pull-right">
-                    <span><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;(Pesanan Saya - 0 items)</span>
+                    <a href="<?= base_url('Front/daftar') ?>"><span><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;(Pesanan Saya - 0 items)</span></a>
                 </div>
             </div>
             <div class="row">

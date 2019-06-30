@@ -103,9 +103,9 @@
                 <a class="navbar-brand" href="<?= base_url('assets/front/') ?>./index2.html"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
                 <!-- Logoooooo --></div>
             <div class="col-md-4 col-sm-4">
-                <!-- <div class="topcart pull-right">
-                    <span><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;(Pesanan Saya - 0 items)</span>
-                </div> -->
+                <div class="topcart pull-right">
+                    <a href="<?= base_url('Front/daftar') ?>"><span><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Daftar Pesanan</span></a>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12">

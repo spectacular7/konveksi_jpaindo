@@ -238,7 +238,7 @@ class Front extends CI_Controller {
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['get_allpesanan'] = $this->Front_model->get_allpesanan();
 
-        $this->load->view('Front/templates/header');
+        $this->load->view('Front/templates/header', $data);
         $this->load->view('Front/daftarpesanan', $data);
         $this->load->view('Front/templates/footer');   
     }
@@ -251,7 +251,7 @@ class Front extends CI_Controller {
         $data['idd'] = $id;
 
         if ($data['get_pesananby_id']) {
-            $this->load->view('Front/templates/header');
+            $this->load->view('Front/templates/header', $data);
             $this->load->view('Front/detail', $data);
             $this->load->view('Front/templates/footer');   
         }else{
@@ -261,7 +261,7 @@ class Front extends CI_Controller {
 
     public function panduan()
     {
-
+        $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
         $this->load->view('Front/panduan', $data);
         $this->load->view('Front/templates/footer');

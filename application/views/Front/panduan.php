@@ -109,10 +109,10 @@
                             </div>
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
-                                <!-- <div class="topcart">
-                                    <span><i class="fa fa-shopping-cart"></i></span>
+                                <div class="topcart">
+                                   <a href="<?= base_url('Front/daftar') ?>"> <span><i class="fa fa-shopping-cart"></i></span></a>
                                     
-                                </div> -->
+                                </div>
                                 <div class="topsearch">
                                     <span>
                                         <i class="fa fa-search"></i>
