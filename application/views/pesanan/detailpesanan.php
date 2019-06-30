@@ -3,6 +3,12 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <a href="#" class="btn btn-success btn-icon-split">
+    <span class="icon text-white-50">
+      <i class="far fa-file-excel"></i>
+    </span>
+    <span class="text">Buat Laporan</span>
+  </a>
     <p align="right"></p>
 
     <!-- DataTales Example -->

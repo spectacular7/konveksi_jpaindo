@@ -73,7 +73,7 @@ class Pesanpakaian_model extends CI_Model
 		$this->db->query("INSERT INTO pesanan
 		(IdPesanan, TglPesan, Deskripsi, TotalHarga, IdPemesan) 
 		VALUES 
-		(" . $IdBaru . ",now(),'" . $pesananBaru['desk'] . "'," . $pesananBaru['total'] . "," . $IdPemesan . ")");
+		(" . $IdBaru . ",now(),'" . $pesananBaru['Deskripsi'] . "'," . $pesananBaru['total'] . "," . $IdPemesan . ")");
 		if ($pesananBaru['jumlahS'] == '') $pesananBaru['jumlahS'] = 0;
 		if ($pesananBaru['jumlahM'] == '') $pesananBaru['jumlahM'] = 0;
 		if ($pesananBaru['jumlahL'] == '') $pesananBaru['jumlahL'] = 0;
@@ -91,6 +91,6 @@ class Pesanpakaian_model extends CI_Model
 		$this->db->query("INSERT INTO pemesan
 		(IdPemesan, Nama, Alamat, Desa, Kecamatan, KabOrKota, NoTelp, Email) 
 		VALUES 
-		(" . $IdPemesan . ",'" . $pesananBaru['nama'] . "','" . $pesananBaru['alamat'] . "','" . $pesananBaru['desa'] . "','" . $pesananBaru['kec'] . "','" . $pesananBaru['kab'] . "','" . $pesananBaru['email'] . "','" . $pesananBaru['notelp'] . "')");
+		(" . $IdPemesan . ",'" . $pesananBaru['Nama'] . "','" . $pesananBaru['Alamat'] . "','" . $pesananBaru['Desa'] . "','" . $pesananBaru['Kecamatan'] . "','" . $pesananBaru['KabOrKota'] . "','" . $pesananBaru['Email'] . "','" . $pesananBaru['notelp'] . "')");
 	}
 }

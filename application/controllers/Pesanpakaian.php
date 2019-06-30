@@ -13,9 +13,8 @@ class Pesanpakaian extends CI_Controller
 	public function index()
 	{
 		$data['judul'] = 'Pilih Pola';
-		// $this->load->view('template/Header', $data);
 		$this->load->view('pesanpakaian/index', $data);
-		// $this->load->view('template/Footer');
+		
 	}
 
 	public function pola($JenisPakaian)
@@ -29,24 +28,25 @@ class Pesanpakaian extends CI_Controller
 
 	public function desain($JenisPakaian, $Pola)
 	{
-		$data['judul'] = 'Pilih Desain';
+		$data['title'] = 'Pilih Desain';
 		$data['KodeJenis'] = $JenisPakaian;
 		$data['desain'] = $this->Pesanpakaian_model->getAllDesain($Pola);
-		// $this->load->view('template/Header', $data);
+		
+		$this->load->view('Front/templates/header');
 		$this->load->view('pesanpakaian/desain', $data);
-		// $this->load->view('template/Footer');
+		$this->load->view('Front/templates/footer');
 	}
 
 	public function detailbarang($JenisPakaian, $Pola, $Desain)
 	{
 		$data['JenisPakaian'] = $this->Pesanpakaian_model->getNamaJenispakaian($JenisPakaian);
-		$data['judul'] = 'Masukan Jumlah';
+		$data['title'] = 'pesan';
 		$data['gambar'] = $this->Pesanpakaian_model->getGambar($JenisPakaian, $Pola, $Desain);
 		$data['barang'] = $this->Pesanpakaian_model->getBarang($JenisPakaian, $Pola, $Desain);
 
-		// $this->load->view('template/Header', $data);
+		$this->load->view('Front/templates/header', $data);
 		$this->load->view('pesanpakaian/detailbarang', $data);
-		// $this->load->view('template/Footer');
+		$this->load->view('Front/templates/footer', $data);
 	}
 
 	public function hitungharga($JenisPakaian, $Pola, $Desain)
@@ -72,20 +72,20 @@ class Pesanpakaian extends CI_Controller
 		$IdBaruDPL = "concat_ws('-',right('" . $_POST['notelp'] . "',4),'L-ORDER',Date_Format(Now(), '%d%c%Y-%k%i'))";
 		$IdBaruDPXL = "concat_ws('-',right('" . $_POST['notelp'] . "',4),'XL-ORDER',Date_Format(Now(), '%d%c%Y-%k%i'))";
 		$IdBaruDPXXL = "concat_ws('-',right('" . $_POST['notelp'] . "',4),'XXL-ORDER',Date_Format(Now(), '%d%c%Y-%k%i'))";
-		$IdPemesan = "ucase(concat(right('" . $_POST['nama'] . "',4),right('" . $_POST['alamat'] . "',4),right('" . $_POST['notelp'] . "',4),Date_Format(Now(), '%d%c%Y%k%i')))";
+		$IdPemesan = "ucase(concat(right('" . $_POST['Nama'] . "',4),right('" . $_POST['Alamat'] . "',4),right('" . $_POST['notelp'] . "',4),Date_Format(Now(), '%d%c%Y%k%i')))";
 
-		$this->form_validation->set_rules('nama', 'Name', 'required|trim');
-		$this->form_validation->set_rules('alamat', 'alamat', 'required|trim');
-		$this->form_validation->set_rules('desa', 'desa', 'required|trim');
-		$this->form_validation->set_rules('kec', 'kec', 'required|trim');
-		$this->form_validation->set_rules('kab', 'kab', 'required|trim');
-		$this->form_validation->set_rules('notelp', 'No Telpo', 'required|trim');
-		$this->form_validation->set_rules('email', 'Email', 'required|trim');
+		$this->form_validation->set_rules('Nama', 'Nama', 'required|trim');
+		$this->form_validation->set_rules('Alamat', 'Alamat', 'required|trim');
+		$this->form_validation->set_rules('Desa', 'Desa', 'required|trim');
+		$this->form_validation->set_rules('Kecamatan', 'Kecamatan', 'required|trim');
+		$this->form_validation->set_rules('KabOrKota', 'KabOrKota', 'required|trim');
+		$this->form_validation->set_rules('notelp', 'notelp', 'required|trim');
+		$this->form_validation->set_rules('Email', 'Email', 'required|trim');
 		if ($this->form_validation->run() == false) {
 			$this->detailbarang($JenisPakaian, $Pola, $Desain);
 		} else {
 			$this->Pesanpakaian_model->inputPesananBaruDB($_POST, $IdBaru, $IdBaruDPS, $IdBaruDPM, $IdBaruDPL, $IdBaruDPXL, $IdBaruDPXXL, $IdPemesan);
-			echo  "OKKKKKK";
+			redirect('pesanpakaian');
 		}
 	}
 }

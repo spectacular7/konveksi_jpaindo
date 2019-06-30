@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $tittle; ?></title>
+    <title><?= $title; ?></title>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,17 +27,17 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/js/vendors/isotope/isotope.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/js/vendors/slick/slick.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/js/vendors/rs-plugin/css/settings.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/js/vendors/select/jquery.selectBoxIt.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/subscribe-better.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/plugin/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/plugin/owl-carousel/owl.theme.css">
-    <link rel="stylesheet" href="<?= base_url('assets'); ?>/css/style.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/js/vendors/isotope/isotope.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/js/vendors/slick/slick.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/js/vendors/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/js/vendors/select/jquery.selectBoxIt.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/subscribe-better.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/plugin/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/plugin/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/style.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -73,10 +73,10 @@
                                         <div class="tbr-info">
                                             <span>Account <i class="fa fa-caret-down"></i></span>
                                             <div class="tbr-inner">
-                                                <a href="<?= base_url('assets'); ?>/my-account.html">My Account</a>
-                                                <a href="<?= base_url('assets'); ?>/#">My Wishlist</a>
-                                                <a href="<?= base_url('assets'); ?>/#">Checkout</a>
-                                                <a href="<?= base_url('assets'); ?>/#">Login</a>
+                                                <a href="<?= base_url('assets/front'); ?>/my-account.html">My Account</a>
+                                                <a href="<?= base_url('assets/front'); ?>/#">My Wishlist</a>
+                                                <a href="<?= base_url('assets/front'); ?>/#">Checkout</a>
+                                                <a href="<?= base_url('assets/front'); ?>/#">Login</a>
                                             </div>
                                         </div>
                                     </li>
@@ -116,7 +116,7 @@
                         <p class="no-margin top-welcome">Selamat Datang di Website Kami !</p>
                     </div>
                     <div class="col-md-4 col-sm-4">
-                        <a class="navbar-brand" href="<?= base_url('assets'); ?>/./index.html"><img src="<?= base_url('assets'); ?>/images/basic/logo.png" class="img-responsive" alt="" /></a>
+                        <a class="navbar-brand" href="<?= base_url('assets'); ?>/./index.html"><img src="<?= base_url('assets/front'); ?>/images/basic/logo.png" class="img-responsive" alt="" /></a>
                     </div>
                     <div class="col-md-4 col-sm-4">
                         <div class="topcart pull-right">
@@ -124,7 +124,7 @@
                             <div class="cart-info">
                                 <small>You have <em class="highlight">3 item(s)</em> in your shopping bag</small>
                                 <div class="ci-item">
-                                    <img src="<?= base_url('assets'); ?>/images/products/fashion/8.jpg" width="80" alt="" />
+                                    <img src="<?= base_url('assets/front'); ?>/images/products/fashion/8.jpg" width="80" alt="" />
                                     <div class="ci-item-info">
                                         <h5><a href="<?= base_url('assets'); ?>/./single-product.html">Product fashion</a></h5>
                                         <p>2 x $250.00</p>
@@ -135,7 +135,7 @@
                                     </div>
                                 </div>
                                 <div class="ci-item">
-                                    <img src="<?= base_url('assets'); ?>/images/products/fashion/15.jpg" width="80" alt="" />
+                                    <img src="<?= base_url('assets/front'); ?>/images/products/fashion/15.jpg" width="80" alt="" />
                                     <div class="ci-item-info">
                                         <h5><a href="<?= base_url('assets'); ?>/./single-product.html">Product fashion</a></h5>
                                         <p>2 x $250.00</p>

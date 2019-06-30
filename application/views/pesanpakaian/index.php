@@ -11,7 +11,7 @@ foreach ($jnspkian as $jns) {
     <div class="row">
         <div class="col-md-3 col-sm-3">
             <div class="block-content space30">
-                <img src="<?= base_url('assets'); ?>/img/jenispakaian/<?= $foto[0][2]; ?>" class="img-responsive" alt="" width="270" />
+                <img src="<?= base_url('assets'); ?>/img/jenis/<?= $foto[0][2]; ?>" class="img-responsive" alt="" width="270" />
                 <div class="text-style2">
                     <h6>Kaos<br></h6>
                     <p><?= $foto[0][1]; ?></p>
@@ -19,7 +19,7 @@ foreach ($jnspkian as $jns) {
                 </div>
             </div>
             <div class="block-content space30">
-                <img src="<?= base_url('assets'); ?>/img/jenispakaian/<?= $foto[1][2]; ?>" class="img-responsive" alt="" width="270" />
+                <img src="<?= base_url('assets'); ?>/img/jenis/<?= $foto[1][2]; ?>" class="img-responsive" alt="" width="270" />
                 <div class="text-style2">
                     <h6>Kaos<br></h6>
                     <p><?= $foto[1][1]; ?></p>
@@ -33,7 +33,7 @@ foreach ($jnspkian as $jns) {
                 foreach ($jnspkian as $jns) { ?>
 
                     <div>
-                        <img src="<?= base_url('assets/img/jenispakaian'); ?>/<?= $jns['GambarJenis']; ?>" class="img-responsive" alt="" width="570px" length="623px" />
+                        <img src="<?= base_url('assets/img/jenis'); ?>/<?= $jns['GambarJenis']; ?>" class="img-responsive" alt="" width="570px" length="623px" />
                         <div class="c-text">
                             <h4>Kaos<br></h4>
                             <p><?= $jns['NamaJenis']; ?></p>
@@ -49,7 +49,7 @@ foreach ($jnspkian as $jns) {
         </div>
         <div class="col-md-3 col-sm-3">
             <div class="block-content space30">
-                <img src="<?= base_url('assets'); ?>/img/jenispakaian/<?= $foto[2][2]; ?>" class="img-responsive" alt="" width="270" />
+                <img src="<?= base_url('assets'); ?>/img/jenis/<?= $foto[2][2]; ?>" class="img-responsive" alt="" width="270" />
                 <div class="text-style2">
                     <h6>Kaos<br></h6>
                     <p><?= $foto[2][1]; ?></p>
@@ -57,7 +57,7 @@ foreach ($jnspkian as $jns) {
                 </div>
             </div>
             <div class="block-content">
-                <img src="<?= base_url('assets'); ?>/img/jenispakaian/<?= $foto[3][2]; ?>" class="img-responsive" alt="" width="270" />
+                <img src="<?= base_url('assets'); ?>/img/jenis/<?= $foto[3][2]; ?>" class="img-responsive" alt="" width="270" />
                 <div class="text-style2">
                     <h6>Kaos<br></h6>
                     <p><?= $foto[3][1]; ?></p>

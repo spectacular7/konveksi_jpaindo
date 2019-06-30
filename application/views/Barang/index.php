@@ -78,7 +78,14 @@
           <div class="form-group row">
             <label for="Ukuran" class="col-sm-2 col-form-label">Ukuran</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="Ukuran" name="Ukuran">
+              <select class="form-control" id="Ukuran" name="Ukuran">
+                <option value="">Pilih Ukuran</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
             </div>
           </div>
           <div class="form-group row">

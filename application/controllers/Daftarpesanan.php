@@ -32,13 +32,12 @@ class Daftarpesanan extends CI_Controller
 	}
 	public function buktipembayaran($idPsnan)
 	{
-		var_dump($_POST);
-		echo "<hr>";
-		var_dump($_FILES);
+		// var_dump($_POST);
+		// echo "<hr>";
+		// var_dump($_FILES);
 		$this->form_validation->set_rules('bukti', 'gggggrrrrrrrrrrrrrrr', 'required|trim');
 		$upload = $_FILES['bukti']['name'];
-		echo "<hr>";
-		var_dump($upload);
+		// echo "<hr>";
 		if ($upload) {
 			$config['upload_path'] = './assets/img/buktipembayaran/';
 			$config['allowed_types'] = 'gif|jpg|png';
@@ -51,12 +50,11 @@ class Daftarpesanan extends CI_Controller
 				echo "gagal";
 			} else {
 				$data = array('upload_data' => $this->upload->data());
-				echo "sukses";
 				$filebukti = $this->upload->data('file_name');
 				$this->db->set('BuktiPembayaran', $filebukti);
 				$this->db->where('IdPesanan', $idPsnan);
-
 				$this->db->update('pesanan');
+				redirect('Front');
 			}
 
 			// Alternately you can set preferences by calling the ``initialize()`` method. Useful if you auto-load the class:
