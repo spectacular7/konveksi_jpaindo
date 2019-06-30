@@ -19,6 +19,7 @@ class Pesanpakaian extends CI_Controller
 
 	public function pola($JenisPakaian)
 	{
+		$data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
 		$data['judul'] = 'Pilih Pola';
 		$data['pola'] = $this->Pesanpakaian_model->getAllPola($JenisPakaian);
 		$this->load->view('templates/headerfront', $data);
@@ -28,17 +29,19 @@ class Pesanpakaian extends CI_Controller
 
 	public function desain($JenisPakaian, $Pola)
 	{
+		$data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
 		$data['title'] = 'Pilih Desain';
 		$data['KodeJenis'] = $JenisPakaian;
 		$data['desain'] = $this->Pesanpakaian_model->getAllDesain($Pola);
 		
-		$this->load->view('Front/templates/header');
+		$this->load->view('Front/templates/header', $data);
 		$this->load->view('pesanpakaian/desain', $data);
 		$this->load->view('Front/templates/footer');
 	}
 
 	public function detailbarang($JenisPakaian, $Pola, $Desain)
 	{
+		$data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
 		$data['JenisPakaian'] = $this->Pesanpakaian_model->getNamaJenispakaian($JenisPakaian);
 		$data['title'] = 'pesan';
 		$data['gambar'] = $this->Pesanpakaian_model->getGambar($JenisPakaian, $Pola, $Desain);

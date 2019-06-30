@@ -72,12 +72,16 @@
                                 <ul>
                                     <li>
                                         <div class="tbr-info">
-                                        <span>Login <i class="fa fa-caret-down"></i></span>
-                                        <div class="tbr-inner">
-                                            <a href="<?= base_url('assets/front/') ?>my-account.html">Akun Saya</a>
-                                            <a href="<?= base_url('assets/front/') ?>#">Edit Akun</a>
-                                            <a href="<?= base_url('assets/front/') ?>#">Logout</a>
-                                        </div>
+                                        <?php if ($pegawai){ ?>
+                                            <a href="<?= base_url('auth/masuk') ?>"><span>Login <i class="fa fa-caret-down"></i></span></a>
+                                            <div class="tbr-inner">
+                                                <a href="<?= base_url('pegawai') ?>">Akun Saya</a>
+                                                <a href="<?= base_url('pegawai/dasboard') ?>">Dashboard</a>
+                                                <a href="<?= base_url('auth/logout') ?>">Logout</a>
+                                            </div>   
+                                        <?php }else{ ?>
+                                            <a href="<?= base_url('auth/masuk') ?>"><span>Login <i class="fa fa-lock"></i></span></a>
+                                        <?php } ?>
                                     </div>
                                     </li>
                                     
@@ -105,17 +109,17 @@
                             </div>
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
-                                <div class="topcart">
+                                <!-- <div class="topcart">
                                     <span><i class="fa fa-shopping-cart"></i></span>
                                     
-                                </div>
+                                </div> -->
                                 <div class="topsearch">
                                     <span>
                                         <i class="fa fa-search"></i>
                                     </span>
-                                    <form class="searchtop">
+                                    <!-- <form class="searchtop">
                                         <input type="text" placeholder="Search entire store here.">
-                                    </form>
+                                    </form> -->
                                 </div>
                             </div>
                             <!-- Navmenu -->
@@ -131,27 +135,16 @@
                                            
                                         
                                 <li class="dropdown">
-                                <a href="<?= base_url('assets/front/') ?>#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pesan</a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pesan</a>
                                 <ul class="dropdown-menu submenu" role="menu">
-                                    <li>
-                                        <a href="<?= base_url('assets/front/') ?>#">Kaos Cardet 30s</a>
+                                   <?php foreach ($jnspkian as $pj) { ?>
                                         <li>
-                                            <a href="<?= base_url('assets/front/') ?>#">Kaos CVC (Cotton Viscose)</a>
-                                            <li>
-                                                <a href="<?= base_url('assets/front/') ?>#">Kaos TC (Teteron Cotton)</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?= base_url('assets/front/') ?>#">Kaos Viscose</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?= base_url('assets/front/') ?>#">Kaos Hyget</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?= base_url('assets/front/') ?>#">Kaos Katun Combed 24s</a>
-                                            </li>
+                                            <a href="<?= base_url('pesanpakaian/pola/'). $pj['KodeJenis']; ?>"><?= $pj['NamaJenis']; ?></a>
+                                        </li>
+                                    <?php } ?>
                                             
                                         </ul>
-                                    </li>
+                                    
                                     <li>
                                            <a href="#">Panduan</a>
                                     </li>

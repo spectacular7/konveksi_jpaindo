@@ -13,6 +13,7 @@ class Front extends CI_Controller {
 
     public function index()
     {
+        $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
         $data['title'] = "Index";
 
@@ -234,6 +235,7 @@ class Front extends CI_Controller {
 
     public function daftar()
     {
+        $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['get_allpesanan'] = $this->Front_model->get_allpesanan();
 
         $this->load->view('Front/templates/header');
@@ -243,6 +245,7 @@ class Front extends CI_Controller {
 
     public function detail($id)
     {
+        $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['get_pesananby_id'] = $this->Front_model->get_pesananby_id($id);
         $data['get_all'] = $this->Front_model->get_all($id);
         $data['idd'] = $id;
@@ -258,13 +261,17 @@ class Front extends CI_Controller {
 
     public function panduan()
     {
-        $this->load->view('Front/panduan');
+
+        $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
+        $this->load->view('Front/panduan', $data);
         $this->load->view('Front/templates/footer');
     }
 
     public function kontak()
     {
-        $this->load->view('Front/templates/header');
+        $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
+        $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
+        $this->load->view('Front/templates/header', $data);
         $this->load->view('Front/kontak');
         $this->load->view('Front/templates/footer');
     }

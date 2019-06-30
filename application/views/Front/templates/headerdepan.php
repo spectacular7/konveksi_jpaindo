@@ -61,12 +61,16 @@
                             <ul>
                                 <li>
                                     <div class="tbr-info">
-                                        <span>Login <i class="fa fa-caret-down"></i></span>
-                                        <div class="tbr-inner">
-                                            <a href="<?= base_url('assets/front/') ?>my-account.html">Akun Saya</a>
-                                            <a href="<?= base_url('assets/front/') ?>#">Edit Akun</a>
-                                            <a href="<?= base_url('assets/front/') ?>#">Logout</a>
-                                        </div>
+                                        <?php if ($pegawai){ ?>
+                                            <a href="<?= base_url('auth/masuk') ?>"><span>Login <i class="fa fa-caret-down"></i></span></a>
+                                            <div class="tbr-inner">
+                                                <a href="<?= base_url('pegawai') ?>">Akun Saya</a>
+                                                <a href="<?= base_url('pegawai/dasboard') ?>">Dashboard</a>
+                                                <a href="<?= base_url('auth/logout') ?>">Logout</a>
+                                            </div>   
+                                        <?php }else{ ?>
+                                            <a href="<?= base_url('auth/masuk') ?>"><span>Login <i class="fa fa-lock"></i></span></a>
+                                        <?php } ?>
                                     </div>
                                 </li>
                             </ul>

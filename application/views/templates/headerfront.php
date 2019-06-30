@@ -49,162 +49,108 @@
 </head>
 
 <body id="home2" class="header2">
-
-    <!-- PRELOADER -->
-    <div id="loader"></div>
-
-    <div class="body">
-
-        <!-- TOPBAR -->
-        <div class="top_bar">
-            <div class="container">
+<!-- PRELOADER -->
+<div id="loader"></div>
+<div class="body">
+    <!-- TOPBAR -->
+    <div class="top_bar">
+        <div class="container">
+            <div class="row">
                 <div class="row">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="tb_center pull-left">
-                                <ul>
-                                    <li><i class="fa fa-phone"></i> Hotline: <a href="<?= base_url('assets'); ?>/#">(+800) 2307 2509 8988</a></li>
-                                    <li><i class="fa fa-envelope-o"></i> <a href="<?= base_url('assets'); ?>/#">online support@smile.com</a></li>
-                                </ul>
-                            </div>
-                            <div class="tb_right pull-right">
-                                <ul>
-                                    <li>
-                                        <div class="tbr-info">
-                                            <span>Account <i class="fa fa-caret-down"></i></span>
+                    <div class="col-md-12 col-sm-12">
+                        <div class="tb_center pull-left">
+                            <ul>
+                                <li>
+                                    <i class="fa fa-phone"></i> Telepon: <a href="<?= base_url('assets/front/') ?>#">(+800) 2307 2509 8988</a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o"></i><a href="<?= base_url('assets/front/') ?>#">akbarindo@konveksi.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tb_right pull-right">
+                            <ul>
+                                <li>
+                                    <div class="tbr-info">
+                                        <?php if ($pegawai){ ?>
+                                            <a href="<?= base_url('auth/masuk') ?>"><span>Login <i class="fa fa-caret-down"></i></span></a>
                                             <div class="tbr-inner">
-                                                <a href="<?= base_url('assets/front'); ?>/my-account.html">My Account</a>
-                                                <a href="<?= base_url('assets/front'); ?>/#">My Wishlist</a>
-                                                <a href="<?= base_url('assets/front'); ?>/#">Checkout</a>
-                                                <a href="<?= base_url('assets/front'); ?>/#">Login</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <!--<li>
-                                            <div class="tbr-info">
-                                                <span><img src="<?= base_url('assets'); ?>/images/basic/flag1.png" alt=""/>&nbsp;English <i class="fa fa-caret-down"></i></span>
-                                                <div class="tbr-inner">
-                                                    <a href="<?= base_url('assets'); ?>/#"><img src="<?= base_url('assets'); ?>/images/basic/flag1.png" alt=""/>English</a>
-                                                    <a href="<?= base_url('assets'); ?>/#"><img src="<?= base_url('assets'); ?>/images/basic/flag2.png" alt=""/>French</a>
-                                                    <a href="<?= base_url('assets'); ?>/#"><img src="<?= base_url('assets'); ?>/images/basic/flag3.png" alt=""/>German</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="tbr-info">
-                                                <span>US Dollar <i class="fa fa-caret-down"></i></span>
-                                                <div class="tbr-inner">
-                                                    <a href="<?= base_url('assets'); ?>/#">&euro; Euro</a>
-                                                    <a href="<?= base_url('assets'); ?>/#">&pound; Pound</a>
-                                                    <a href="<?= base_url('assets'); ?>/#">&yen; Yen</a>
-                                                </div>
-                                            </div>
-                                        </li>-->
-                                </ul>
-                            </div>
+                                                <a href="<?= base_url('pegawai') ?>">Akun Saya</a>
+                                                <a href="<?= base_url('pegawai/dasboard') ?>">Dashboard</a>
+                                                <a href="<?= base_url('auth/logout') ?>">Logout</a>
+                                            </div>   
+                                        <?php }else{ ?>
+                                            <a href="<?= base_url('auth/masuk') ?>"><span>Login <i class="fa fa-lock"></i></span></a>
+                                        <?php } ?>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- HEADER -->
-        <header id="header2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4">
-                        <p class="no-margin top-welcome">Selamat Datang di Website Kami !</p>
+    </div>
+    <!-- AKHIR TOPBAR -->
+    <!-- HEADER -->
+    <header id="header2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <p class="no-margin top-welcome">Selamat Datang di Website Kami !</p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <a class="navbar-brand" href="<?= base_url('assets/front/') ?>./index2.html"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
+                <!-- Logoooooo --></div>
+            <div class="col-md-4 col-sm-4">
+                <!-- <div class="topcart pull-right">
+                    <span><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;(Pesanan Saya - 0 items)</span>
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="top-search2 pull-right">
+                       <!--  <form>
+                            <input type="text" placeholder="Cari . . .">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form> -->
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <a class="navbar-brand" href="<?= base_url('assets'); ?>/./index.html"><img src="<?= base_url('assets/front'); ?>/images/basic/logo.png" class="img-responsive" alt="" /></a>
+                    <nav class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
                     </div>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="topcart pull-right">
-                            <span><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;My Bag - 0 item(s)</span>
-                            <div class="cart-info">
-                                <small>You have <em class="highlight">3 item(s)</em> in your shopping bag</small>
-                                <div class="ci-item">
-                                    <img src="<?= base_url('assets/front'); ?>/images/products/fashion/8.jpg" width="80" alt="" />
-                                    <div class="ci-item-info">
-                                        <h5><a href="<?= base_url('assets'); ?>/./single-product.html">Product fashion</a></h5>
-                                        <p>2 x $250.00</p>
-                                        <div class="ci-edit">
-                                            <a href="<?= base_url('assets'); ?>/#" class="edit fa fa-edit"></a>
-                                            <a href="<?= base_url('assets'); ?>/#" class="edit fa fa-trash"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ci-item">
-                                    <img src="<?= base_url('assets/front'); ?>/images/products/fashion/15.jpg" width="80" alt="" />
-                                    <div class="ci-item-info">
-                                        <h5><a href="<?= base_url('assets'); ?>/./single-product.html">Product fashion</a></h5>
-                                        <p>2 x $250.00</p>
-                                        <div class="ci-edit">
-                                            <a href="<?= base_url('assets'); ?>/#" class="edit fa fa-edit"></a>
-                                            <a href="<?= base_url('assets'); ?>/#" class="edit fa fa-trash"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ci-total">Subtotal: $750.00</div>
-                                <div class="cart-btn">
-                                    <a href="<?= base_url('assets'); ?>/#">View Bag</a>
-                                    <a href="<?= base_url('assets'); ?>/#">Checkout</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="top-search2 pull-right">
-                            <form>
-                                <input type="text" placeholder="Search entire store here.">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                        <nav class="navbar navbar-default">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                                <!-- Logo -->
-                            </div>
-                            <!-- Navmenu -->
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav">
-                                    <li>
-                                        <a href="<?= base_url('assets/auth'); ?>" class="active" data-toggle="dropdown" role="button" aria-expanded="false">Home</a>
-                                    </li>
-
-                                    <li class="dropdown">
-                                        <a href="<?= base_url('assets'); ?>/./categories-grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pesan</a>
-                                        <ul class="dropdown-menu submenu" role="menu">
-                                            <li><a href="<?= base_url('assets'); ?>/./categories-grid.html">T-Shirt</a>
-                                            <li><a href="<?= base_url('assets'); ?>/./categories-list.html">Jersey</a>
-                                            <li><a href="<?= base_url('assets'); ?>/./single-product.html">Coat/Jas</a></li>
-                                            <li><a href="<?= base_url('assets'); ?>/./shoppingcart.html">Shirt / Kemeja</a></li>
-                                            <li><a href="<?= base_url('assets'); ?>/./checkout.html">Celana</a></li>
-                                            <li><a href="<?= base_url('assets'); ?>/./checkout-2.html">Jaket</a></li>
-                                            <li><a href="<?= base_url('assets'); ?>/./checkout-2.html">Polo Shirt</a></li>
-
-                                        </ul>
-                                    </li>
-
-                                    <li><a href="<?= base_url('assets'); ?>/contact-1.html">Tentang</a></li>
-                                    <li><a href="<?= base_url('assets'); ?>/contact-1.html">Kontak</a></li>
-
-
-
-
+                    <!-- Navmenu -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#">Beranda</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pesan</a>
+                                <ul class="dropdown-menu submenu" role="menu">
+                                    <?php foreach ($jnspkian as $pj) { ?>
+                                        <li>
+                                            <a href="<?= base_url('pesanpakaian/pola/'). $pj['KodeJenis']; ?>"><?= $pj['NamaJenis']; ?></a>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
-                            </div>
-                        </nav>
+                            </li>
+                            <li>
+                                <a href="<?= base_url('Front/panduan') ?>">Panduan</a>
+                            </li>
+                            <li>
+                                <a href="<?= base_url('Front/kontak') ?>">Kontak</a>
+                            </li>
+                        </ul>
                     </div>
+                    </nav>
                 </div>
             </div>
+        </div>
         </header>
-
-        <div class="clearfix space10"></div>
+        <!---AKHIR HEADERRRR-->
