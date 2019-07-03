@@ -77,14 +77,16 @@
                                             <td>
                                                 <?php
                                                     if (!$get_pesananby_id['BuktiPembayaran']) {
-                                                        echo "Belum Mengirim Bukti Pembayaran";
+                                                        echo "Belum Mengirim Bukti Pembayaran"; ?>
+                                                        <input type="file" name="bukti" size="20" />
+                                                        <div class="space30"></div>
+                                                        <input class="btn btn-black text-left btnknfrm" type="submit" value="Upload" >
+                                                    <?php 
                                                     } else {
                                                         echo "Sudah Mengirim Bukti Pembayaran";
                                                     }
                                                 ?>
-                                                <input type="file" name="bukti" size="20" />
-                                                <div class="space30"></div>
-                                                <input class="btn btn-black text-left btnknfrm" type="submit" value="Upload" >
+                                                
                                             </td>
                                         </tr>
                                     </tbody>

@@ -15,7 +15,7 @@ class Front extends CI_Controller {
     {
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
-        $data['title'] = "Index";
+        $data['title'] = "Detail Pesanan";
 
         $this->load->view('templates/headerfront', $data);
         $this->load->view('pesanpakaian/index', $data);
@@ -235,8 +235,10 @@ class Front extends CI_Controller {
 
     public function daftar()
     {
+        $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['get_allpesanan'] = $this->Front_model->get_allpesanan();
+        $data['title'] = 'daftar pesanan';
 
         $this->load->view('Front/templates/header', $data);
         $this->load->view('Front/daftarpesanan', $data);
@@ -245,6 +247,7 @@ class Front extends CI_Controller {
 
     public function detail($id)
     {
+        $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['get_pesananby_id'] = $this->Front_model->get_pesananby_id($id);
         $data['get_all'] = $this->Front_model->get_all($id);

@@ -144,7 +144,10 @@
                                                 addthis.init()
                                             }
         </script>
-            
+            <script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js"></script>
+            <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+            <script src="<?= base_url('assets/'); ?>js/demo/datatables-demo.js"></script>
+                
             <script src="<?= base_url('assets/front/'); ?>js/bootstrap.min.js"></script>
             <script src="<?= base_url('assets/front/'); ?>plugin/owl-carousel/owl.carousel.min.js"></script>
             <script src="<?= base_url('assets/front/'); ?>js/bs-navbar.js"></script>
@@ -158,6 +161,7 @@
             <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
             <script src="<?= base_url('assets/front/'); ?>js/vendors/select/jquery.selectBoxIt.min.js"></script>
             <script src="<?= base_url('assets/front/'); ?>js/main.js"></script>
+
             <?php if ($title == 'pesan'): ?>
                 <script src="<?= base_url('assets/'); ?>vendor/jquery/jquery.min.js"></script>    
             <?php endif ?>
@@ -165,5 +169,7 @@
             <script src="<?= base_url('assets/'); ?>js/adit.js"></script>
             <script src="<?= base_url('assets/'); ?>js/adit.1.js"></script>
             
+            
+
             </body>
             </html>

@@ -51,10 +51,12 @@ $(function(){
 		
 	});
 
-	$('.tampilmodalubahjenis').on('click', function(){
+	$('#dataTable').on('click', '.tampilmodalubahjenis', function(){
+	// $('.tampilmodalubahjenis').on('click', function(){
 		$('#modaljenisLabel').html('Ubah data desain');
 		$('.modal-footer button[type=submit]').html('Ubah data');
 		$('.modal-content form').attr('action', 'Jenispakaian/edit');
+		$('.img-img').show();
 
 		const id = $(this).data('id');
 		

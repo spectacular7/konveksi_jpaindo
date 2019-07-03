@@ -112,14 +112,6 @@
                                     <a href="<?= base_url('Front/daftar') ?>"><span><i class="fa fa-shopping-cart"></i></span></a>
                                     
                                 </div>
-                                <div class="topsearch">
-                                    <span>
-                                        <i class="fa fa-search"></i>
-                                    </span>
-                                    <!-- <form class="searchtop">
-                                        <input type="text" placeholder="Search entire store here.">
-                                    </form> -->
-                                </div>
                             </div>
                             <!-- Navmenu -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

@@ -42,7 +42,7 @@ $(function(){
 		$('#newMenuModalLabel').html('Tambah data Pola');
 		$('.modal-footer button[type=submit] ').html('Tambah data')
 		$('#KdPola').prop('type', 'hidden');
-		$('.img-img').remove();
+		$('.img-img').hide();
 		$('#lblKdDesain').hide();
 
 		$('#KodeJenis').val('');
@@ -54,13 +54,14 @@ $(function(){
 		
 	});
 
-	$('.tampilmodalubah').on('click', function(){
+	$('#dataTable').on('click', '.tampilmodalubah', function(){
+	// $('.tampilmodalubah').on('click', function(){
+		const id = $(this).data('id');
+
 		$('#newMenuModalLabel').html('Ubah data desain');
 		$('.modal-footer button[type=submit]').html('Ubah data');
 		$('.modal-content form').attr('action', 'Pola/edit');
-
-		const id = $(this).data('id');
-		
+		$('.img-img').show();
 		$.ajax({
 			url:'Pola/getubah',
 			data:{id : id},

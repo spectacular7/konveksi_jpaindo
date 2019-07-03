@@ -12,7 +12,7 @@
               <div class="space50"></div>
               <div class="row select-wraps">
                 <div class="table-responsive">            
-                  <table class="table table-striped ">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr>
                         <th scope="col">No</th>

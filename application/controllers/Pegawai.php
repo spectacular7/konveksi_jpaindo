@@ -6,7 +6,7 @@ class Pegawai extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Controling Page';
+        $data['title'] = 'Profile';
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
 
         $this->load->view('templates/header', $data);
@@ -18,7 +18,7 @@ class Pegawai extends CI_Controller
 
     public function dasboard()
     {
-        $data['title'] = 'List Pegawai';
+        $data['title'] = 'Dahsboard';
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);

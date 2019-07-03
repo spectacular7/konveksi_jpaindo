@@ -1,14 +1,31 @@
 <!-- Sidebar -->
 <?php
-            if ($title == 'Jenis Pakaian' or 'Pola' or 'Design' or 'Barang' or 'Bahan Baku' or 'Bahan Baku Desain') {
-                $active = 'active';
-                $show = 'show';
-                
-            }else{
-                $active = '';
-                $show = '';
-            }
-        ?>
+    if ($title == 'Jenis Pakaian' or $title == 'Pola' or $title == 'Design' or $title == 'Barang' or $title == 'Bahan Baku' or $title == 'Bahan Baku Desain') {
+        $active = 'active';
+        $show = 'show';
+        $collapsed = '';
+
+        $active1 = '';
+        $show1 = '';
+        $collapsed1 = 'collapsed';
+    }elseif ($title == 'Order Detail Page' or $title ==  'Controling Page' or $title ==  'Detail Pesanan') {
+        $active = '';
+        $show = '';
+        $collapsed = 'collapsed';
+
+        $active1 = 'active';
+        $show1 = 'show';
+        $collapsed1 = '';
+    }else{
+        $active = '';
+        $show = '';
+        $collapsed = '';
+
+        $active1 = '';
+        $show1 = '';
+        $collapsed1 = '';
+    }
+?>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -29,7 +46,7 @@
 
     <?php if ($pegawai['Level'] == 1) { ?>
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
+        <li class="nav-item <?= $title == 'Dahsboard' ? 'active' : '' ?>">
             <a class="nav-link" href="<?= base_url('pegawai/dasboard'); ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
@@ -40,7 +57,7 @@
     <?php } ?>
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item">
+    <li class="nav-item <?= $title == 'Profile' ? 'active' : '' ?>">
         <a class="nav-link" href="<?= base_url('pegawai/'); ?>">
             <i class="fas fa-fw fa-user"></i>
             <span>Profile</span></a>
@@ -55,25 +72,25 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+    <li class="nav-item <?= $active1 ?>"  >
+        <a class="nav-link <?= $collapsed1 ?>" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-table"></i>
             <span>Orders</span>
         </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="collapseTwo" class="collapse <?= $show1 ?>" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Orders Components:</h6>
-                <a class="collapse-item <?= $title == 'Pesanan' ? 'active' : '' ?>" href="<?= base_url('pesanan'); ?>">Pesanan</a>
-                <a class="collapse-item" href="<?= base_url('pemesan'); ?>">Pemesan</a>
-                <a class="collapse-item" href="<?= base_url('detailpesanan'); ?>">Detail Pesanan</a>
+                <a class="collapse-item <?= $title == 'Controling Page' ? 'active' : '' ?>" href="<?= base_url('pesanan'); ?>">Pesanan</a>
+                <a class="collapse-item <?= $title == 'Order Detail Page' ? 'active' : '' ?>" href="<?= base_url('pemesan'); ?>">Pemesan</a>
+                <a class="collapse-item <?= $title == 'Detail Pesanan' ? 'active' : '' ?>" href="<?= base_url('detailpesanan'); ?>">Detail Pesanan</a>
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     
-    <li class="nav-item active">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+    <li class="nav-item <?= $active ?>">
+        <a class="nav-link <?= $collapsed ?>" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-table"></i>
             <span>Bahan Baku</span>
         </a>

@@ -54,11 +54,11 @@ $(function(){
 		
 	});
 
-	$('.tampilmodalubah').on('click', function(){
+	$('#dataTable').on('click', '.tampilmodalubah', function(){
 		$('#newMenuModalLabel').html('Ubah data Bahan baku desain');
 		$('.modal-footer button[type=submit]').html('Ubah data');
 		$('.modal-content form').attr('action', 'Barang/edit');
-
+		$('.img-img').show();
 		const id = $(this).data('id');
 		
 		$.ajax({

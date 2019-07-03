@@ -54,11 +54,12 @@ $(function(){
 		
 	});
 
-	$('.tampilmodalubah').on('click', function(){
+	$('#dataTable').on('click', '.tampilmodalubah', function(){
+	// $('.tampilmodalubah').on('click', function(){
 		$('#newMenuModalLabel').html('Ubah data desain');
 		$('.modal-footer button[type=submit]').html('Ubah data');
 		$('.modal-content form').attr('action', 'Design/edit');
-
+		$('.img-img').show();
 		const id = $(this).data('id');
 		
 		$.ajax({

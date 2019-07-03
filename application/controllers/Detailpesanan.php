@@ -12,7 +12,7 @@ class Detailpesanan extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Order Detail Page';
+        $data['title'] = 'Detail Pesanan';
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['dpesanan'] = $this->db->get('detailpesanan')->result_array();
 
