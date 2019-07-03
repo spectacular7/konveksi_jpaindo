@@ -65,7 +65,7 @@
                                         </td>
                                 
                                         <td id="ht<?= $brg['Ukuran']; ?>"></td>
-                                        <td><Input type="number" name="harga<?= $brg['Ukuran']; ?>" id="jml<?= $brg['Ukuran']; ?>" placeholder="0" value="0" hidden></td>
+                                        <td><Input type="number" name="harga<?= $brg['Ukuran']; ?>" id="jml<?= $brg['Ukuran']; ?>" placeholder="0" hidden></td>
                                         
                                     </tr>
                                 <?php } ?>
@@ -74,10 +74,17 @@
                     <td>
                         <p align="right" id="ptot"></p>
                     <td id="httot">
-                    <td><Input type="number" name="total" id="total" placeholder="0" value="0" hidden>
+                        
+                    </td>
+                    <td><Input type="number" name="total" id="total" placeholder="0" value="<?= set_value('total'); ?>" hidden/></td>
+                    
                 </tr>
-                            </tbody>
+                    </tbody>
                         </table>
+                        <?php echo form_error('<div class=" alert alert-danger" role="alert">' ,'total', '</div>'); ?>
+                        
+                        <?= $this->session->flashdata('message') ?>
+
                     </div>
                 <div class="space20"></div>
                 <h3>JUDUL</h3>

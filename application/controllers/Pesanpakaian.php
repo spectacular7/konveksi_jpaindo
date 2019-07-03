@@ -77,18 +77,26 @@ class Pesanpakaian extends CI_Controller
 		$IdBaruDPXXL = "concat_ws('-',right('" . $_POST['notelp'] . "',4),'XXL-ORDER',Date_Format(Now(), '%d%c%Y-%k%i'))";
 		$IdPemesan = "ucase(concat(right('" . $_POST['Nama'] . "',4),right('" . $_POST['Alamat'] . "',4),right('" . $_POST['notelp'] . "',4),Date_Format(Now(), '%d%c%Y%k%i')))";
 
-		$this->form_validation->set_rules('Nama', 'Nama', 'required|trim');
-		$this->form_validation->set_rules('Alamat', 'Alamat', 'required|trim');
-		$this->form_validation->set_rules('Desa', 'Desa', 'required|trim');
-		$this->form_validation->set_rules('Kecamatan', 'Kecamatan', 'required|trim');
-		$this->form_validation->set_rules('KabOrKota', 'KabOrKota', 'required|trim');
-		$this->form_validation->set_rules('notelp', 'notelp', 'required|trim');
-		$this->form_validation->set_rules('Email', 'Email', 'required|trim');
+		$this->form_validation->set_rules('Nama', 'Nama', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('Alamat', 'Alamat', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('Desa', 'Desa', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('Kecamatan', 'Kecamatan', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('KabOrKota', 'KabOrKota', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('notelp', 'notelp', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('Email', 'Email', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('total', 'total', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('Deskripsi', 'Deskripsi', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_error_delimiters('<small class="text-danger">', '</small>');
+
 		if ($this->form_validation->run() == false) {
+			if ($this->input->post('total') < 1 or $this->input->post('total') == 0) {
+				$this->session->set_flashdata('message', '<div class=" alert alert-danger" role="alert">
+                Jumlah barang harus diisi</div>');
+			}
 			$this->detailbarang($JenisPakaian, $Pola, $Desain);
 		} else {
 			$this->Pesanpakaian_model->inputPesananBaruDB($_POST, $IdBaru, $IdBaruDPS, $IdBaruDPM, $IdBaruDPL, $IdBaruDPXL, $IdBaruDPXXL, $IdPemesan);
-			redirect('pesanpakaian');
+			redirect('Front');
 		}
 	}
 }
