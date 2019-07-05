@@ -74,7 +74,7 @@ class Pola extends CI_Controller {
 	    	$datainsert ['GbrPola'] = $xx['upload_data']['file_name'];
 			$datainsert['KodeJenis'] = $this->input->post('KodeJenis',TRUE);
 			$result = $this->pola_model->insert($datainsert);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data desain Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', 'Berhasil ditambah!');
         	echo json_encode($data);
 		}
 		
@@ -98,6 +98,7 @@ class Pola extends CI_Controller {
         	$data['success'] = true;
         	$data['redirect'] = 'pola';
         	$dataip['KodeJenis'] = $this->input->post('KodeJenis');
+        	$this->session->set_flashdata('message', 'Berhasil diubah!');
 	        $result= $this->pola_model->update($this->input->post('KdPola'), $dataip);
 
 	        echo json_encode($data);

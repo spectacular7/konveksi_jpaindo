@@ -62,7 +62,7 @@ class Barang extends CI_Controller {
 	    	$datainsert['NamaBrg'] = $this->input->post('NamaBrg',TRUE);
 	    	$datainsert['KdDesain'] = $this->input->post('KdDesain',TRUE);
 			$result = $this->Barang_model->insert($datainsert);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data desain Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', 'Berhasil ditambah!');
         	echo json_encode($data);
 		}
 		
@@ -80,7 +80,7 @@ class Barang extends CI_Controller {
 	    	$dataip['NamaBrg'] = $this->input->post('NamaBrg',TRUE);
 	    	$dataip['KdDesain'] = $this->input->post('KdDesain',TRUE);
         	$result= $this->Barang_model->update($this->input->post('KdBarang'), $dataip);
-
+        	$this->session->set_flashdata('message', 'Berhasil diubah!');
 	        echo json_encode($data);
 		}else{
 			$data['success'] = false;

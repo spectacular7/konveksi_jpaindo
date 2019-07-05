@@ -8,7 +8,7 @@
           	<div class="card shadow mb-4">
             <div class="card-header py-3">
               <a  data-toggle="modal" data-target="#newMenuModal"><h6 class="m-0 font-weight-bold text-primary tampilmodaltambah">Tambah Pola</h6></a>
-              <?= $this->session->flashdata('message') ?>
+              <div class="flash-data" data-flash = "<?= $this->session->flashdata('message') ?>"></div>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -93,6 +93,7 @@
           </div>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-success kirim">Tambah</button>
         </div>
       </form>

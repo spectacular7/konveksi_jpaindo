@@ -62,7 +62,7 @@ class Bahanbakudesain extends CI_Controller {
 	    	$datainsert['KdBBaku'] = $this->input->post('KdBBaku',TRUE);
 	    	$datainsert['KdDesain'] = $this->input->post('KdDesain',TRUE);
 			$result = $this->Bahanbakudesain_model->insert($datainsert);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data desain Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', 'Berhasil ditambah!');
         	echo json_encode($data);
 		}
 		
@@ -79,6 +79,7 @@ class Bahanbakudesain extends CI_Controller {
         	$dataip['UkuranBBDM2'] = $this->input->post('UkuranBBDM2');
         	$dataip['KdDesain'] = $this->input->post('KdDesain');
         	$dataip['KdBBaku'] = $this->input->post('KdBBaku');
+        	$this->session->set_flashdata('message', 'Berhasil diubah!');
         	$result= $this->Bahanbakudesain_model->update($this->input->post('KodeBBakuDesain'), $dataip);
 
 	        echo json_encode($data);

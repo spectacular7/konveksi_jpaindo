@@ -1,6 +1,14 @@
-
-
 $(function(){
+
+	const flashdata = $('.flash-data').data('flash');
+	if (flashdata) {
+		Swal.fire({
+			title: 'Data Bahan Baku Desain',
+			text:  flashdata,
+			type: 'success',
+			timer: 1500,
+		});
+	}
 
 	$('.btnhapus').on('click', function(){
 		
@@ -11,6 +19,7 @@ $(function(){
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
+			cancelButtonText : 'Batal',
 			confirmButtonText: 'Ya, Hapus!'
 		}).then((result) => {
 			if (result.value) {

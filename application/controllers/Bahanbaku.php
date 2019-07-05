@@ -49,7 +49,7 @@ class Bahanbaku extends CI_Controller {
 			];
 
 			$this->Bahanbaku_model->insert($data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Bahan Baku Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', 'Berhasil ditambah!');
 			redirect('Bahanbaku');
 		}
 		
@@ -79,7 +79,7 @@ class Bahanbaku extends CI_Controller {
 				];
 
 				$this->Bahanbaku_model->update($this->input->post('KdBBaku'), $data);
-				$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Bahan Baku Berhasil Ditambah!</div>');
+				$this->session->set_flashdata('message', 'Berhasil diubah!');
 				redirect('Bahanbaku');
 			}
 		}else{

@@ -1,5 +1,17 @@
 $(function(){
 
+	const flashdata = $('.flash-data').data('flash');
+	if (flashdata) {
+		Swal.fire({
+			title: 'Data Jenis Pakaian',
+			text:  flashdata,
+			type: 'success',
+			timer: 1500,
+		});
+	}
+
+	
+
 	$('.btnhapusjenis').on('click', function(){
 		Swal.fire({
 			title: 'Apakah anda yakin?',
@@ -8,7 +20,9 @@ $(function(){
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
-			confirmButtonText: 'Ya, Hapus!'
+			confirmButtonText: 'Ya, Hapus!',
+			cancelButtonText : 'Batal'
+
 		}).then((result) => {
 			if (result.value) {
 				const id = $(this).data('id');
@@ -29,6 +43,18 @@ $(function(){
 							window.location.href =  data.redirect;
 						});
 					}
+					// error: function(data){
+					// 	Swal.fire({
+					// 		title: 'Error!',
+					// 		text: 'Terjadi Kesalahan Saat Mengambil Data.',
+					// 		type: 'warning',
+					// 		timer: 1500,
+					// 		confirmButtonColor: '#3085d6',
+					// 		confirmButtonText: 'OK!'
+					// 	}).then((result) => {
+					// 		window.location.href =  data.redirect;
+					// 	});	
+					// }
 				});
 			}
 		})
@@ -39,7 +65,7 @@ $(function(){
 		$('#modaljenisLabel').html('Tambah data Jenis Pakaian');
 		$('.modal-footer button[type=submit] ').html('Tambah data')
 		$('#KodeJenis').prop('type', 'hidden');
-		$('.img-img').remove();
+		$('.img-img').hide();
 		$('#lblKodeJenis').hide();
 
 		$('#KodeJenis').val('');

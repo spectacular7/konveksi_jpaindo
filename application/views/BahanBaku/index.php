@@ -8,6 +8,7 @@
           	<div class="card shadow mb-4">
             <div class="card-header py-3">
               <a href="<?= base_url('Bahanbaku/add')?>"><h6 class="m-0 font-weight-bold text-primary">Tambah Bahan Baku</h6></a>
+              <div class="flash-data" data-flash = "<?= $this->session->flashdata('message') ?>"></div>
             </div>
             <div class="card-body">
               <div class="table-responsive">

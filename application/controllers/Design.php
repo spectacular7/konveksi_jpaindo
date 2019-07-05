@@ -73,7 +73,7 @@ class Design extends CI_Controller {
 	    	$datainsert ['GbrDesain'] = $xx['upload_data']['file_name'];
 			$datainsert['KdPola'] = $this->input->post('KdPola',TRUE);
 			$result = $this->Design_model->insert($datainsert);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data desain Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', 'Berhasil ditambah!');
         	echo json_encode($data);
 		}
 		
@@ -98,7 +98,7 @@ class Design extends CI_Controller {
         	$data['redirect'] = 'Design';
         	$dataip['KdPola'] = $this->input->post('KdPola');
 	        $result= $this->Design_model->update($this->input->post('KdDesain'), $dataip);
-
+	        $this->session->set_flashdata('message', 'Berhasil diubah!');
 	        echo json_encode($data);
 		}else{
 			$data['success'] = false;

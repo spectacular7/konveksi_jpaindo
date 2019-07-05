@@ -73,7 +73,7 @@ class Jenispakaian extends CI_Controller {
 	    	$datainsert['NamaJenis'] = $this->input->post('NamaJenis',TRUE);
 	    	$datainsert ['GambarJenis'] = $xx['upload_data']['file_name'];
 			$this->Jenis_model->insert($datainsert);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data desain Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', 'Berhasil ditambah!');
         	echo json_encode($data);
 		}
 		
@@ -98,7 +98,7 @@ class Jenispakaian extends CI_Controller {
         	$data['redirect'] = 'Jenispakaian';
         	$dataip['NamaJenis'] = $this->input->post('NamaJenis');
 	        $result= $this->Jenis_model->update($this->input->post('KodeJenis'), $dataip);
-
+	        $this->session->set_flashdata('message', 'Berhasil diubah!');
 	        echo json_encode($data);
 		}else{
 			$data['success'] = false;

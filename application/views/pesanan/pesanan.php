@@ -2,12 +2,12 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <h1 class="h3 mb-2 text-gray-800">Pesanan</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message'); ?>
-        <nav class="navbar navbar-light bg-light">
+        <!-- <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand"><small>Show
                     <select class="custom-select mr-sm-2 col-6">
                         <option value="10">10</option>
@@ -21,30 +21,28 @@
                 Search :
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             </form>
-        </nav>
+        </nav> -->
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="text-center">
                         <tr>
-                            <th>Order identity</th>
-                            <th>Order Date</th>
-                            <th>Description</th>
-                            <th>Total price</th>
-                            <th>Order status</th>
-                            <th>Proof of payment</th>
-                            <th>Payment status</th>
-                            <th>customer identity</th>
-                            <th>Employee identity</th>
-                            <th>Action</th>
+                            <th>ID</th>
+                            <th>Tanggal Pesan</th>
+                            <th>Total Harga</th>
+                            <th>Status Pemesanan</th>
+                            <th>Bukti Pembayaran</th>
+                            <th>Status Pembayaran</th>
+                            <th>ID Pelanggan</th>
+                            <th>ID Pegawai</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
-                    <?php foreach ($pesanan as $ps) { ?>
-                        <tbody>
+                    <tbody>
+                        <?php foreach ($pesanan as $ps) { ?>
                             <tr>
                                 <td><?= $ps['IdPesanan']; ?></td>
                                 <td class="text-center"><?= $ps['TglPesan']; ?></td>
-                                <td><?= $ps['Deskripsi']; ?></td>
                                 <td><?= $ps['TotalHarga']; ?></td>
                                 <!-- kolom status pesanan -->
                                 <td class="text-center">
@@ -96,8 +94,9 @@
                                     </button>
                                 </td>
                             </tr>
-                        </tbody>
-                    <?php } ?>
+                        <?php } ?>
+                    </tbody>
+                    
                 </table>
             </div>
         </div>

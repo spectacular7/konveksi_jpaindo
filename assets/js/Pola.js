@@ -1,6 +1,14 @@
-
-
 $(function(){
+
+	const flashdata = $('.flash-data').data('flash');
+	if (flashdata) {
+		Swal.fire({
+			title: 'Data Pola',
+			text:  flashdata,
+			type: 'success',
+			timer: 1500,
+		});
+	}
 
 	$('.btnhapus').on('click', function(){
 		
@@ -11,7 +19,10 @@ $(function(){
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
-			confirmButtonText: 'Ya, Hapus!'
+			cancelButtonText : 'Batal',
+			confirmButtonText: 'Ya, Hapus!',
+			
+
 		}).then((result) => {
 			if (result.value) {
 				const id = $(this).data('id');

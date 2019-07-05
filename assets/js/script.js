@@ -1,6 +1,14 @@
-
-
 $(function(){
+
+	const flashdata = $('.flash-data').data('flash');
+	if (flashdata) {
+		Swal.fire({
+			title: 'Data Desain',
+			text:  flashdata,
+			type: 'success',
+			timer: 1500,
+		});
+	}
 
 	$('.btnhapus').on('click', function(){
 		
@@ -11,6 +19,7 @@ $(function(){
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',
 			cancelButtonColor: '#d33',
+			cancelButtonText : 'Batal',
 			confirmButtonText: 'Ya, Hapus!'
 		}).then((result) => {
 			if (result.value) {
@@ -42,7 +51,7 @@ $(function(){
 		$('#newMenuModalLabel').html('Tambah data desain');
 		$('.modal-footer button[type=submit] ').html('Tambah data')
 		$('#KdDesain').prop('type', 'hidden');
-		$('.img-img').remove();
+		$('.img-img').hide();
 		$('#lblKdDesain').hide();
 
 		$('#KdDesain').val('');

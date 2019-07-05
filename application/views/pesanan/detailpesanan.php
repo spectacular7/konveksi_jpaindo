@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <h1 class="h3 mb-2 text-gray-800">Detail Pesanan</h1>
     <a href="#" class="btn btn-success btn-icon-split">
     <span class="icon text-white-50">
       <i class="far fa-file-excel"></i>
@@ -14,7 +14,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message'); ?>
-        <nav class="navbar navbar-light bg-light">
+        <!-- <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand"><small>Show
                     <select class="custom-select mr-sm-2 col-6">
                         <option value="10">10</option>
@@ -28,22 +28,22 @@
                 Search :
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             </form>
-        </nav>
+        </nav> -->
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="text-center">
                         <tr>
-                            <th>Order identity</th>
-                            <th>Order Date</th>
-                            <th>Description</th>
-                            <th>Total price</th>
-                            <th>Order status</th>
-                            <th colspan="2">Action</th>
+                            <th>ID</th>
+                            <th>Jumlah Barang</th>
+                            <th>Sub Total</th>
+                            <th>ID Pesanan</th>
+                            <th>Kode Barang</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
-                    <?php foreach ($dpesanan as $ps) { ?>
-                        <tbody>
+                    <tbody>
+                        <?php foreach ($dpesanan as $ps) { ?>
                             <tr>
                                 <td><?= $ps['IdDPesanan']; ?></td>
                                 <td class="text-center"><?= $ps['Jumlah']; ?></td>
@@ -54,15 +54,14 @@
                                     <button class="btn btn-primary btn-circle btn-sm editdp" data-toggle="modal" data-target="#ModalBukti1" data-jml="<?= $ps['Jumlah']; ?>" data-idp="<?= $ps['IdDPesanan']; ?>">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                </td>
-                                <td class="text-center">
                                     <button class="btn btn-danger btn-circle btn-sm hapusdpsnn" data-id="<?= $ps['IdDPesanan']; ?>">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
+                                    <i class="fas fa-trash"></i>
+                                </button>
                                 </td>
+                                
                             </tr>
+                            <?php } ?>
                         </tbody>
-                    <?php } ?>
                 </table>
             </div>
         </div>

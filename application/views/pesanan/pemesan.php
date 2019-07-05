@@ -2,13 +2,13 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+    <h1 class="h3 mb-2 text-gray-800">Pemesan</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message'); ?>
 
-        <nav class="navbar navbar-light bg-light">
+        <!-- <nav class="navbar navbar-light bg-light">
             <a class="navbar-brand"><small>Show
                     <select class="custom-select mr-sm-2 col-6">
                         <option value="10">10</option>
@@ -22,14 +22,14 @@
                 Search :
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             </form>
-        </nav>
+        </nav> -->
 
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="text-center">
                         <tr>
-                            <th>Customer identity</th>
+                            <th>ID</th>
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Desa</th>
@@ -37,11 +37,11 @@
                             <th>Kabupaten Atau Kota</th>
                             <th>No telp</th>
                             <th>Email</th>
-                            <th colspan="2">Action</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
-                    <?php foreach ($pemesan as $ps) { ?>
-                        <tbody>
+                    <tbody>
+                        <?php foreach ($pemesan as $ps) { ?>
                             <tr>
                                 <td><?= $ps['IdPemesan']; ?></td>
                                 <td><?= $ps['Nama']; ?></td>
@@ -51,19 +51,17 @@
                                 <td><?= $ps['KabOrKota']; ?></td>
                                 <td><?= $ps['NoTelp']; ?></td>
                                 <td><?= $ps['Email']; ?></td>
-                                <td class="text-center">
+                                <td>
                                     <button class="btn btn-primary btn-circle btn-sm editdp" data-toggle="modal" data-target="#ModalBukti1" data-jml="" data-idp="">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                </td>
-                                <td class="text-center">
                                     <button class="btn btn-danger btn-circle btn-sm hapusdpsnn" data-toggle="modal" data-target="#ModalBukti1" data-idp="">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </td>
                             </tr>
-                        </tbody>
-                    <?php } ?>
+                        <?php } ?>
+                    </tbody>
                 </table>
             </div>
         </div>
