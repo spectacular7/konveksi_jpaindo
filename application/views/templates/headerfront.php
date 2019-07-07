@@ -25,7 +25,7 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,300italic,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8/dist/sweetalert2.all.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/bootstrap.min.css">
@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/plugin/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/plugin/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="<?= base_url('assets/front'); ?>/css/style.css">
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,7 +101,7 @@
                 <p class="no-margin top-welcome">Selamat Datang di Website Kami !</p>
             </div>
             <div class="col-md-4 col-sm-4">
-                <a class="navbar-brand" href="<?= base_url('assets/front/') ?>./index2.html"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
+                <a class="navbar-brand" href="<?= base_url('Front') ?>"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
                 <!-- Logoooooo --></div>
             <div class="col-md-4 col-sm-4">
                 <div class="topcart pull-right">
@@ -109,21 +110,21 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="top-search2 pull-right">
-                       <!--  <form>
+                    <!-- <div class="top-search2 pull-right">
+                        <form>
                             <input type="text" placeholder="Cari . . .">
                             <button type="submit"><i class="fa fa-search"></i></button>
-                        </form> -->
-                    </div>
+                        </form>
+                    </div> -->
                     <nav class="navbar navbar-default">
-                    <div class="navbar-header">
+                    <!-- <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         </button>
-                    </div>
+                    </div> -->
                     <!-- Navmenu -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">

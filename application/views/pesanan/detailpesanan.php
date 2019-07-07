@@ -54,9 +54,7 @@
                                     <button class="btn btn-primary btn-circle btn-sm editdp" data-toggle="modal" data-target="#ModalBukti1" data-jml="<?= $ps['Jumlah']; ?>" data-idp="<?= $ps['IdDPesanan']; ?>">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button class="btn btn-danger btn-circle btn-sm hapusdpsnn" data-id="<?= $ps['IdDPesanan']; ?>">
-                                    <i class="fas fa-trash"></i>
-                                </button>
+                                    <a href ="#" class="btn btn-danger btn-circle btn-sm hapusdpsnn" id="hapusdpsnn" data-idp="<?= $ps['IdDPesanan']; ?>"><i class="fas fa-trash"></i></a>
                                 </td>
                                 
                             </tr>

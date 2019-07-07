@@ -134,21 +134,28 @@ class Pesanan extends CI_Controller
 
     public function hapuspesanan()
     {
-        $IdPesanan = $_POST['id'];
-        $data['redirect'] = 'Pesanan';
+        // $IdPesanan = $_POST['id'];
+        // $data['redirect'] = 'Pesanan';
         
+        // $this->db->where('IdPesanan', $IdPesanan);
+        // $this->db->delete('pesanan');
+        // $this->db->where('IdPesanan', $IdPesanan);
+        // $this->db->delete('detailpesanan');
+
+        // $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        //     <strong>Congratulation!</strong> Your account has been registration.
+        //     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        //     <span aria-hidden="true">&times;</span>
+        //     </button>
+        //     </div>');
+
+        // echo json_encode($data);
+        $IdPesanan = $_POST['idp'];
         $this->db->where('IdPesanan', $IdPesanan);
         $this->db->delete('pesanan');
         $this->db->where('IdPesanan', $IdPesanan);
         $this->db->delete('detailpesanan');
-
-        $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Congratulation!</strong> Your account has been registration.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>');
-
+        $data['redirect'] = 'Pesanan';
         echo json_encode($data);
     }
 

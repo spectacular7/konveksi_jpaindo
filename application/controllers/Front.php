@@ -15,7 +15,7 @@ class Front extends CI_Controller {
     {
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
-        $data['title'] = "Detail Pesanan";
+        $data['title'] = "Beranda";
 
         $this->load->view('templates/headerfront', $data);
         $this->load->view('pesanpakaian/index', $data);

@@ -89,7 +89,7 @@
                 <p class="no-margin top-welcome">Selamat Datang di Website Kami !</p>
             </div>
             <div class="col-md-4 col-sm-4">
-                <a class="navbar-brand" href="<?= base_url('assets/front/') ?>./index2.html"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
+                <a class="navbar-brand" href="<?= base_url('Front') ?>"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
                 <!-- Logoooooo --></div>
             <div class="col-md-4 col-sm-4">
                 <div class="topcart pull-right">

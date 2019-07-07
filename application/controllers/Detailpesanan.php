@@ -42,18 +42,15 @@ class Detailpesanan extends CI_Controller
         redirect('detailpesanan');
     }
 
-    public function hapuspesanan($IdDPesanan)
+    public function hapuspesanan()
     {
+
+        
+
+        $IdDPesanan = $_POST['idp'];
         $this->db->where('IdDPesanan', $IdDPesanan);
         $this->db->delete('detailpesanan');
-
-        $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Congratulation!</strong> Your account has been registration.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>');
-
-        redirect('detailpesanan');
+        $data['redirect'] = 'detailpesanan';
+        echo json_encode($data);
     }
 }

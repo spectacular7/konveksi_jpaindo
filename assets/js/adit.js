@@ -1,6 +1,7 @@
 $(function () {
 
 
+
     $('.TampilBukti1').on('click', function () {
 
         const idp = $(this).data('idp');
@@ -24,18 +25,79 @@ $(function () {
     $('.hapuspsnn').on('click', function () {
         const idp = $(this).data('idp');
 
-        $('#bukti1').html('<strong>Delete</strong>');
-        $('#body').html('<center>Delete order data on id ' + '<strong> ' + idp + '?</strong></center>');
-        $('#tblmdlbkt').attr('href', 'pesanan/hapuspesanan/' + idp);
+        Swal.fire({
+            title: 'Apakah anda yakin? akan menghapus ' + idp,
+            text: "Anda tidak akan dapat mengembalikan data ini!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText : 'Batal',
+            confirmButtonText: 'Ya, Hapus!',
+            
+
+        }).then((result) => {
+            if (result.value) {
+                const idp = $(this).data('idp');
+                $.ajax({
+                    url:'Pesanan/hapuspesanan',
+                    data:{idp : idp},
+                    method: 'post',
+                    dataType:'json',
+                    success: function(data){
+                        Swal.fire({
+                            title: 'Terhapus!',
+                            text: 'Data sudah terhapus.',
+                            type: 'success',
+                            timer: 1500,
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK!'
+                        }).then((result) => {
+                            window.location.href =  data.redirect;
+                        });
+                    }
+                });
+            }
+        })
     })
 
     $('.hapusdpsnn').on('click', function () {
         const idp = $(this).data('idp');
 
-        $('#bukti1').html('<strong>Delete</strong>');
-        $('#body').html('<center>Delete order data on id ' + '<strong> ' + idp + '?</strong></center>');
-        $('#tblmdlbkt').attr('href', 'detailpesanan/hapuspesanan/' + idp);
-        $('#btn').attr('type', 'button');
+        Swal.fire({
+            title: 'Apakah anda yakin? akan menghapus ID = ' + idp,
+            text: "Anda tidak akan dapat mengembalikan data ini!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText : 'Batal',
+            confirmButtonText: 'Ya, Hapus!',
+            
+
+        }).then((result) => {
+            if (result.value) {
+                const idp = $(this).data('idp');
+                $.ajax({
+                    url:'detailpesanan/hapuspesanan',
+                    data:{idp : idp},
+                    method: 'post',
+                    dataType:'json',
+                    success: function(data){
+                        Swal.fire({
+                            title: 'Terhapus!',
+                            text: 'Data sudah terhapus.',
+                            type: 'success',
+                            timer: 1500,
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK!'
+                        }).then((result) => {
+                            window.location.href =  data.redirect;
+                        });
+                    }
+                });
+            }
+        })
     })
 
     $('.editdp').on('click', function () {

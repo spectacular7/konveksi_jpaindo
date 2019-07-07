@@ -175,6 +175,7 @@
 
 
 <!-- Javascript -->
+
 <script src="<?= base_url('assets/front'); ?>/js/jquery.js"></script>
 
 <!-- ADDTHIS -->
@@ -184,7 +185,17 @@
     function loadAddThis() {
         addthis.init()
     }
+    const flashdata = $('.flash-data').data('flash');
+    if (flashdata) {
+        Swal.fire({
+            title: 'Berhasil Pesan',
+            text:  flashdata,
+            type: 'success'
+        });
+    }
+        
 </script>
+
 <script src="<?= base_url('assets/front'); ?>/js/bootstrap.min.js"></script>
 <script src="<?= base_url('assets/front'); ?>/plugin/owl-carousel/owl.carousel.min.js"></script>
 <script src="<?= base_url('assets/front'); ?>/js/bs-navbar.js"></script>

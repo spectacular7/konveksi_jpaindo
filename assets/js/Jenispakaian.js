@@ -12,7 +12,7 @@ $(function(){
 
 	
 
-	$('.btnhapusjenis').on('click', function(){
+	$('#dataTable').on('click', '.btnhapusjenis', function(){
 		Swal.fire({
 			title: 'Apakah anda yakin?',
 			text: "Anda tidak akan dapat mengembalikan data ini!",

@@ -71,6 +71,7 @@
                                                 ?>
                                             </td>
                                         </tr>
+                                        <?php if ($get_pesananby_id['StatusPesanan'] == 'Y') { ?>
                                         <tr>
                                             <td>Bukti Pembayaran</td>
                                             <td>:</td>
@@ -89,6 +90,7 @@
                                                 
                                             </td>
                                         </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                                 <div class="space60"></div>

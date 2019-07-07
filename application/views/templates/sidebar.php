@@ -52,6 +52,12 @@
                 <span>Dashboard</span></a>
         </li>
 
+        <li class="nav-item <?= $title == 'Pegawai' ? 'active' : '' ?>">
+            <a class="nav-link" href="<?= base_url('pegawai/listpegawai'); ?>">
+                <i class="fas fa-fw fa-user-tie"></i>
+                <span>Pegawai</span></a>
+        </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
     <?php } ?>

@@ -74,6 +74,9 @@
   <?php if ($title == 'Bahan Baku') { ?>
     <script src="<?= base_url('assets/'); ?>js/Bahanbaku.js"></script>
   <?php } ?>
+  <?php if ($title == 'Pegawai') { ?>
+    <script src="<?= base_url('assets/'); ?>js/Pegawai.js"></script>
+  <?php } ?>
   
 
   <script type="text/javascript">

@@ -89,9 +89,7 @@
                                 <td><?= $ps['IdPegawai']; ?></td>
 
                                 <td class="text-center">
-                                    <button class="btn btn-danger btn-circle btn-sm hapuspsnn" data-toggle="modal" data-target="#ModalBukti1" data-idp="<?= $ps['IdPesanan']; ?>">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
+                                    <a href ="#" class="btn btn-danger btn-circle btn-sm hapuspsnn" id="hapuspsnn" data-idp="<?= $ps['IdPesanan']; ?>"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php } ?>

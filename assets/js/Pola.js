@@ -10,7 +10,7 @@ $(function(){
 		});
 	}
 
-	$('.btnhapus').on('click', function(){
+	$('#dataTable').on('click', '.btnhapus', function(){
 		
 		Swal.fire({
 			title: 'Apakah anda yakin?',

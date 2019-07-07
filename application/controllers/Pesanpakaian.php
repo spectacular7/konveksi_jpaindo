@@ -96,6 +96,7 @@ class Pesanpakaian extends CI_Controller
 			$this->detailbarang($JenisPakaian, $Pola, $Desain);
 		} else {
 			$this->Pesanpakaian_model->inputPesananBaruDB($_POST, $IdBaru, $IdBaruDPS, $IdBaruDPM, $IdBaruDPL, $IdBaruDPXL, $IdBaruDPXXL, $IdPemesan);
+			$this->session->set_flashdata('message', 'Pesanan anda sedang dalam proses admin');
 			redirect('Front');
 		}
 	}

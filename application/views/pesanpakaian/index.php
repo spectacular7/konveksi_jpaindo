@@ -9,6 +9,7 @@ foreach ($jnspkian as $jns) {
 
 <div class="block-main container no-padding-top">
     <div class="row">
+        <div class="flash-data" data-flash = "<?= $this->session->flashdata('message') ?>"></div>
         <div class="col-md-3 col-sm-3">
             <div class="block-content space30">
                 <img src="<?= base_url('assets'); ?>/img/jenis/<?= $foto[0][2]; ?>" class="img-responsive" alt="" width="270" />

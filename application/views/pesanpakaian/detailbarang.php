@@ -10,6 +10,7 @@
 </div>
 
 <div class="space20"></div>
+<div class="flash-data" data-flash = "<?= $this->session->flashdata('message') ?>"></div>
 <!-- DESAIN PAKAIAN -->
 <form action="<?= base_url('pesanpakaian/inputPesananbaru'); ?>/<?= $JenisPakaian['KodeJenis']; ?>/<?= $gambar['KdPola']; ?>/<?= $gambar['KdDesain']; ?>" method="post">
     <div class="shop-single">

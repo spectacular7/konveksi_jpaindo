@@ -104,7 +104,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Logo -->
-                                <a class="navbar-brand" href="./index2.html"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
+                                <a class="navbar-brand" href="<?= base_url('Front') ?>"><img src="<?= base_url('assets/front/') ?>images/basic/logo.png" class="img-responsive" alt=""/></a>
                             </div>
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
@@ -139,7 +139,7 @@
                                            <a href="<?= base_url('Front/panduan') ?>">Panduan</a>
                                     </li>
                                     <li>
-                                       <a href="#">Kontak</a>
+                                       <a href="<?= base_url('Front/kontak') ?>">Kontak</a>
                                     </li>
                                     
                                    
