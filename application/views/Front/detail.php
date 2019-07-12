@@ -7,6 +7,7 @@
         </ul>
     </div>
 </div>
+<div class="flash-data" data-flash = "<?= $this->session->flashdata('message') ?>"></div>
 <div class="space20"></div>
 <!-- DESAIN PAKAIAN -->
 <div class="shop-single">

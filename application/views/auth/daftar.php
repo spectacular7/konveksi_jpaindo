@@ -11,7 +11,7 @@
             </div>
             <form class="user" action="<?= base_url('auth/daftar'); ?>" method="post">
               <div class="form-group">
-                <input type="number" name="id" class="form-control form-control-user" id="exampleInputEmail" placeholder="Id Pegawai-inggris" value="<?= set_value('id'); ?>">
+                <input type="number" name="id" class="form-control form-control-user" id="exampleInputEmail" placeholder="NIP" value="<?= set_value('id'); ?>">
                 <?= form_error('id', '<small class="text-danger pl-3">', '</small>'); ?>
               </div>
               <div class="form-group">
@@ -41,9 +41,6 @@
               </button>
             </form>
             <hr>
-            <div class="text-center">
-              <a class="small" href="forgot-password.html">Forgot Password?</a>
-            </div>
             <div class="text-center">
               <a class="small" href="<?= base_url('auth/masuk'); ?>">Already have an account? Login!</a>
             </div>

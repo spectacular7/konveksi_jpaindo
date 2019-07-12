@@ -41,7 +41,7 @@ class Auth extends CI_Controller
         if ($pegawai) {
             if ($pegawai['Aktif'] == 'T') {
                 $this->session->set_flashdata('message', '<div class=" alert alert-danger" role="alert">
-                Id has not been activated</div>');
+                NIP has not been activated</div>');
                 redirect('auth/masuk');
             } else {
                 if (password_verify($password, $pegawai['Password'])) {

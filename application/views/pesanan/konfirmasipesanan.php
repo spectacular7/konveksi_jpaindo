@@ -7,15 +7,14 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="text-center">
                         <tr>
-                            <th>KdBBaku</th>
-                            <th>NamaBBaku</th>
-                            <th>Description</th>
-                            <th>Total price</th>
-                            <th>Order status</th>
-                            <th>Proof of payment</th>
-                            <th>Payment status</th>
-                            <th>customer identity</th>
-                            <th>Employee identity</th>
+                            <th>Kode Bahan Baku</th>
+                            <th>Nama Bahan Baku</th>
+                            <th>Jenis</th>
+                            <th>Bahan Baku Tersedia per M<sup>2</sup></th>
+                            <th>Ukuran yang dibutuhkan</th>
+                            <th>Jumlah Barang</th>
+                            <th>Ukuran Bahan Baku yang Digunakan</th>
+                            <th>Sisa Bahan baku</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -24,7 +23,6 @@
                             <tr>
                                 <td><?= $ps['KdBBaku']; ?></td>
                                 <td><?= $ps['NamaBBaku']; ?></td>
-                                <td><?= $ps['Jenis']; ?></td>
                                 <td><?= $ps['Jenis']; ?></td>
                                 <td class="text-center"><?= $ps['TersediaM2']; ?></td>
                                 <td class="text-center"><?= $ps['ukuranbbdm2']; ?></td>

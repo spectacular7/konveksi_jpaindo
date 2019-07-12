@@ -83,7 +83,7 @@ class Pesanpakaian extends CI_Controller
 		$this->form_validation->set_rules('Kecamatan', 'Kecamatan', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
 		$this->form_validation->set_rules('KabOrKota', 'KabOrKota', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
 		$this->form_validation->set_rules('notelp', 'notelp', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
-		$this->form_validation->set_rules('Email', 'Email', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
+		$this->form_validation->set_rules('Email', 'Email', 'required|valid_email|trim', ['required' => '*Field Tidak Boleh Kosong'] );
 		$this->form_validation->set_rules('total', 'total', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
 		$this->form_validation->set_rules('Deskripsi', 'Deskripsi', 'required|trim', ['required' => '*Field Tidak Boleh Kosong'] );
 		$this->form_validation->set_error_delimiters('<small class="text-danger">', '</small>');
@@ -96,8 +96,11 @@ class Pesanpakaian extends CI_Controller
 			$this->detailbarang($JenisPakaian, $Pola, $Desain);
 		} else {
 			$this->Pesanpakaian_model->inputPesananBaruDB($_POST, $IdBaru, $IdBaruDPS, $IdBaruDPM, $IdBaruDPL, $IdBaruDPXL, $IdBaruDPXXL, $IdPemesan);
-			$this->session->set_flashdata('message', 'Pesanan anda sedang dalam proses admin');
-			redirect('Front');
+			$idj['data']=$this->db->query('select '.$IdBaru.' as adit')->row_array();
+    		// var_dump($idj['data']['adit']);
+    		// echo $idj['data']['adit'];
+    		$this->session->set_flashdata('message', 'Terimakasih Sudah Memesan Silahkan Tunggu Konfirmasi Kami');
+			redirect('Front/detail/'.$idj['data']['adit']);
 		}
 	}
 }

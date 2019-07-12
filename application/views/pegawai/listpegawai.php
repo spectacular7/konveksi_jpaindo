@@ -21,10 +21,9 @@
                   <thead>
                     <tr align="center">
                       <th>No</th>
-                      <th>Kode</th>
+                      <th>NIP</th>
                       <th>Nama</th>
                       <th>Jabatan</th>
-                      <th>Level</th>
                       <th>Email</th>
                       <th>Aksi</th>
                     </tr>
@@ -36,12 +35,13 @@
 	                      <td><?= $j['IdPeg']; ?></td>
 	                      <td><?= $j['Nama']; ?></td>
 	                      <td><?= $j['Jabatan']; ?></td>
-	                      <td><?= $j['Level']; ?></td>
 	                      <td><?= $j['Email']; ?></td>
 	                      <td>
                           <a href ="#" data-toggle="modal" data-target="#modaljenis" class="badge badge-success tampilmodalubahjenis" data-id="<?= $j['IdPeg']; ?>" >Detail</a>
 	                      	 | 
-	          				<a href ="#" class="badge badge-danger btnhapusjenis" id="btnhapusjenis" data-id="<?= $j['IdPeg']; ?>">Hapus</a>
+	          				<a href ="#" class="badge badge-danger btnhapusjenis" id="btnhapusjenis" data-id="<?= $j['IdPeg']; ?>">Hapus</a>|<?php if($j['Aktif']=='Y'){ ?><a href ="<?=base_url('pegawai/naktifkan/').$j['IdPeg'];?>" class="badge badge-warning" id="btnhapusjenis" data-id="<?= $j['IdPeg']; ?>">Non Aktifkan</a></td><?php }else{ ?>
+                      <a href ="<?=base_url('pegawai/aktifkan/').$j['IdPeg'];?>" class="badge badge-primary" id="btnhapusjenis" data-id="<?= $j['IdPeg']; ?>">Aktifkan</a>
+                    <?php } ?>
 	                      </td>
 	                    </tr>
                     <?php endforeach; ?>

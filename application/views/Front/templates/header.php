@@ -33,6 +33,7 @@
         <link rel="stylesheet" href="<?= base_url('assets/front/') ?>css/subscribe-better.css">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css">
         <link rel="stylesheet" href="<?= base_url('assets/front/') ?>css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8/dist/sweetalert2.all.min.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

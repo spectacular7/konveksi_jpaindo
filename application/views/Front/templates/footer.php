@@ -143,6 +143,14 @@
                                             function loadAddThis() {
                                                 addthis.init()
                                             }
+            const flashdata = $('.flash-data').data('flash');
+            if (flashdata) {
+                Swal.fire({
+                title: 'Berhasil',
+                text:  flashdata,
+                type: 'success'
+                });
+            }
         </script>
             <script src="<?= base_url('assets/'); ?>vendor/datatables/jquery.dataTables.min.js"></script>
             <script src="<?= base_url('assets/'); ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>

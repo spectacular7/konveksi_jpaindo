@@ -37,6 +37,7 @@ class Pegawai extends CI_Controller
         $data['title'] = 'Pegawai';
 
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
+        $this->db->where('level',0);
         $data['peg'] = $this->db->get('pegawai')->result_array();
 
 
@@ -61,4 +62,17 @@ class Pegawai extends CI_Controller
         echo json_encode($data);
     }
 
+    public function aktifkan($id){
+        $this->db->set('Aktif','Y');
+        $this->db->where('IdPeg',$id);
+        $this->db->update('pegawai');
+        redirect('pegawai/listpegawai');
+    }
+
+    public function naktifkan($id){
+        $this->db->set('Aktif','T');
+        $this->db->where('IdPeg',$id);
+        $this->db->update('pegawai');
+        redirect('pegawai/listpegawai');
+    }
 }

@@ -19,7 +19,7 @@
 
                 <form class="user" action="<?= base_url('auth/masuk'); ?>" method="post">
                   <div class="form-group">
-                    <input type="number" class="form-control form-control-user" id="id" aria-describedby="numberHelp" name="id" placeholder="Enter your id" value="<?= set_value('id'); ?>">
+                    <input type="number" class="form-control form-control-user" id="id" aria-describedby="numberHelp" name="id" placeholder="Enter your NIP" value="<?= set_value('id'); ?>">
                     <?= form_error('id', '<small class="text-danger pl-3">', '</small>'); ?>
                   </div>
                   <div class="form-group">
@@ -33,9 +33,6 @@
 
                 </form>
                 <hr>
-                <div class="text-center">
-                  <a class="small" href="forgot-password.html">Forgot Password?</a>
-                </div>
                 <div class="text-center">
                   <a class="small" href="<?= base_url('auth/daftar'); ?>">Create an Account!</a>
                 </div>
