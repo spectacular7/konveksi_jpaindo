@@ -127,18 +127,6 @@ class Front_model extends CI_Model
 		return $this->db->get('detailpesanan')->result_array();
 	}
 
-	function get_report()
-	{	
-		$this->db->join('pesanan', 'detailpesanan.IdPesanan = pesanan.IdPesanan');
-		$this->db->join('pemesan', 'pesanan.IdPemesan = pemesan.IdPemesan');
-		$this->db->join('barang', 'detailpesanan.KdBarang = barang.KdBarang');
-		$this->db->join('desain', 'barang.KdDesain = desain.KdDesain');
-		$this->db->join('pola', 'desain.KdPola = pola.KdPola');
-		$this->db->join('jenispakaian', 'pola.KodeJenis = jenispakaian.KodeJenis');
-		$this->db->order_by('pesanan.IdPesanan', 'DESC');
-		return $this->db->get('detailpesanan')->result();
-	}
-
 	function get_desain_by_kdpola($id)
 	{	
 		$this->db->where('KdPola', $id);

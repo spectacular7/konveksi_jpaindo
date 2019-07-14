@@ -54,4 +54,6 @@ class Daftarpesanan_model extends CI_Model
 		$query = $this->db->query('select * from ' . $this->tPemesan . ',' . $this->tPesanan . ' where ' . $this->tPemesan . '.IdPemesan=' . $this->tPesanan . ".IdPemesan and idPesanan='" . $idPsnan . "'");
 		return $query->row_array();
 	}
+
+	
 }

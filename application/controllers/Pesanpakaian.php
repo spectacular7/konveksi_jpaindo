@@ -21,7 +21,9 @@ class Pesanpakaian extends CI_Controller
 	{
 		$data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
 		$data['judul'] = 'Pilih Pola';
+		$data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
 		$data['pola'] = $this->Pesanpakaian_model->getAllPola($JenisPakaian);
+
 		$this->load->view('templates/headerfront', $data);
 		$this->load->view('pesanpakaian/pola', $data);
 		$this->load->view('templates/footerfront');
@@ -31,6 +33,7 @@ class Pesanpakaian extends CI_Controller
 	{
 		$data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
 		$data['title'] = 'Pilih Desain';
+		$data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
 		$data['KodeJenis'] = $JenisPakaian;
 		$data['desain'] = $this->Pesanpakaian_model->getAllDesain($Pola);
 		
@@ -46,7 +49,8 @@ class Pesanpakaian extends CI_Controller
 		$data['title'] = 'pesan';
 		$data['gambar'] = $this->Pesanpakaian_model->getGambar($JenisPakaian, $Pola, $Desain);
 		$data['barang'] = $this->Pesanpakaian_model->getBarang($JenisPakaian, $Pola, $Desain);
-
+		$data['jnspkian'] = $this->Pesanpakaian_model->getAllJenisPakaian();
+		
 		$this->load->view('Front/templates/header', $data);
 		$this->load->view('pesanpakaian/detailbarang', $data);
 		$this->load->view('Front/templates/footer', $data);

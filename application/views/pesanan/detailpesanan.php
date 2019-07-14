@@ -3,7 +3,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800">Detail Pesanan</h1>
-    <a href="#" class="btn btn-success btn-icon-split">
+    <a href="<?= base_url('Detailpesanan/excel') ?>" class="btn btn-success btn-icon-split">
     <span class="icon text-white-50">
       <i class="far fa-file-excel"></i>
     </span>
