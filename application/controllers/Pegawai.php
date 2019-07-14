@@ -4,11 +4,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Pegawai extends CI_Controller
 {
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->library('form_validation');
+        $this->load->model('Home_model');
+    }
+
+
     public function index()
     {
         $data['title'] = 'Profile';
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
-
+        
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -23,13 +31,13 @@ class Pegawai extends CI_Controller
         $data['pegawai'] = $this->db->get_where('pegawai', ['IdPeg' => $this->session->userdata('id')])->row_array();
         $data['peg'] = $this->db->get('pegawai')->num_rows();
         $data['pesanan'] = $this->db->get('pesanan')->num_rows();
-
+        $data['graf']=$this->Home_model->get_chart();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('dasboard/index', $data);
-        $this->load->view('templates/auth_footer');
+        $this->load->view('templates/adminfooter');
     }
 
     public function listpegawai()
